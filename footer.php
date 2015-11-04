@@ -1,6 +1,14 @@
 <footer>
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  <div class="container content">
+     <ul class="clearfix">
+        <?php while(has_sub_field('social')): ?>
+               <li>
+               <a href="<?php the_sub_field('link') ?>"><i class="fa fa-<?php the_sub_field('icon');?>"></i></a>
+                </li>
+              <?php endwhile; ?>
+     </ul>
+
+    <p>&copy; Carys Mills <?php echo date('Y'); ?></p>
   </div>
 </footer>
 

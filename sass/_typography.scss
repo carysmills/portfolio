@@ -1,8 +1,44 @@
+$purple: #3b323c; //rgba(59, 50, 60, 100)
+$green: #7a918d; //rgba(122, 145, 141, 100)
+$brown: #766b65; //rgba(118, 107, 101, 100)
+
 a {
-	color: #BA209B;
+	color: black;
 	text-decoration: none;
 	&:hover {
-		color: #D424B1;
+		color: $green;
+	}
+}
+
+h1 {
+	font-family: 'Cutive', serif;
+	color: white;
+}
+
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+}
+
+h3 {
+	color: $purple;
+}
+
+h3, h5, h6 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h4 {
+	font-family: 'Cutive', serif;
+	text-transform: uppercase;
+	font-size: 25px;
+	&:after {
+		content: " ";
+		display: block;
+		background: $green;
+		height: 3px;
+		width: 45%;
+		margin-top: 8px;
 	}
 }
 
@@ -10,6 +46,7 @@ a {
 
 p {
 	line-height: 1.5;
+	font-family: 'Open Sans', sans-serif;
 }
 
 /*blockquotes*/

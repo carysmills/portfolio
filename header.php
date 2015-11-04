@@ -8,6 +8,8 @@
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
   <?php // Load our CSS ?>
+  <link href='https://fonts.googleapis.com/css?family=Cutive|Open+Sans:400,300,300italic,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
   <?php wp_head(); ?>
@@ -16,18 +18,23 @@
 
 <body <?php body_class(); ?>>
 
-<header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
+<section id="home">
+      <?php // Start the loop ?>
+      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_location' => 'primary'
-    )); ?>
-  </div> <!-- /.container -->
-</header><!--/.header-->
+        <div class="header">
+        <?php if ( has_post_thumbnail() ): {
+            $feat_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+            $the_content = get_the_content();
+                 echo 
+                 '<div class="backgroundImage" style="background:url('.$feat_image_url.');">
+                     <div class="buffer">
+                        <p class="container">'.$the_content.'</p>
+                        <a href="#portfolio"><button class="what">See my work</button></a>
+                      </div>
+                  </div>';
+                    } endif; ?>
+        <?php endwhile;?>
+        </div>
 
+</section>
