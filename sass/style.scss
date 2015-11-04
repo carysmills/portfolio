@@ -50,6 +50,7 @@ body {
 
 .backgroundImage {
 	height: 100%;
+	z-index: 1;
 }
 
 .buffer {
@@ -92,7 +93,7 @@ button.what:active {
 
 .bio {
 	display: flex;
-	background: #F3F2F3;
+	background: $grey;
 	width: 100%;
 }
 
@@ -142,6 +143,57 @@ img.headshot {
 	justify-content: flex-end; 
 }
 
-.current-menu-item {
-	color: red;
+.bio.content {
+	margin-bottom: 50px;
 }
+
+//portfolio section
+.portfolio {
+	background: $purple;
+	padding: 30px;
+	h4 {
+	color: white;
+	&:after {
+		width: 25%;
+	}
+}
+}
+
+.portfolio p {
+	color: white;
+}
+
+//expert section
+
+section.expert {
+	text-align: center;
+	background: $grey;
+	padding-top: 50px;
+	padding-left: 50px;
+	h4 {
+	color: black;
+	margin-top: 0;
+	&:after {
+		margin: 0 auto;
+		width: 30%;
+	}
+}
+}
+
+.expertise {
+	width: 26%;
+	display: flex;
+	strong {
+		font-size: 25px;
+	}
+}
+
+.expertIcon {
+	border: 10px solid $green;
+	border-radius: 50%;
+}
+
+// .expertContained {
+// 	display: flex;
+// 	flex-direction: row;
+// }

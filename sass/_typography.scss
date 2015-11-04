@@ -1,10 +1,12 @@
 $purple: #3b323c; //rgba(59, 50, 60, 100)
 $green: #7a918d; //rgba(122, 145, 141, 100)
 $brown: #766b65; //rgba(118, 107, 101, 100)
+$grey: #F3F2F3;
 
 a {
 	color: black;
 	text-decoration: none;
+	transition: color 0.5s;
 	&:hover {
 		color: $green;
 	}
