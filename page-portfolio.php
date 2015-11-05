@@ -32,39 +32,73 @@
       </div>
               
       <div id="mixContainer">
+
         <div class="mix category-1" data-myorder="1">
              <?php 
                 $image = get_field('portfolio_img');
                    if( !empty($image) ): ?>
                    <img class="portfolio_img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
              <?php endif; ?> 
-             <?php the_field('portfolio_text'); ?>
-
-            <div class="techUsed">
-              <?php while(has_sub_field('skills')): ?>
-                <?php the_sub_field('tech') ?>
-                  <i class="fa fa-<?php the_sub_field('icon');?>"></i>
-                 <?php endwhile; ?>
-            </div>
+              <div class="portfolio_text">
+                  <?php the_field('portfolio_text'); ?>
+             </div>
         </div>
 
         <div class="mix category-2" data-myorder="1">
-          
+            <?php 
+               $image = get_field('portfolio_img5');
+                  if( !empty($image) ): ?>
+                  <img class="portfolio_img5" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <?php endif; ?> 
+             <div class="portfolio_text5">
+                 <?php the_field('portfolio_text5'); ?>
+            </div>
         </div>
 
         <div class="mix category-1" data-myorder="2">
-          
+            <?php 
+               $image = get_field('portfolio_img_2');
+                  if( !empty($image) ): ?>
+                  <img class="portfolio_img_2" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <?php endif; ?> 
+             <div class="portfolio_text_2">
+                 <?php the_field('portfolio_text_2'); ?>
+            </div>
         </div>
 
         <div class="mix category-1" data-myorder="3">
+              <?php 
+                 $image = get_field('portfolio_img3');
+                    if( !empty($image) ): ?>
+                    <img class="portfolio_img3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+              <?php endif; ?> 
+               <div class="portfolio_text3">
+                   <?php the_field('portfolio_text3'); ?>
+              </div>
           
         </div>
 
         <div class="mix category-1" data-myorder="4">
+          <?php 
+             $image = get_field('portfolio_img4');
+                if( !empty($image) ): ?>
+                <img class="portfolio_img4" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+          <?php endif; ?> 
+           <div class="portfolio_text4">
+               <?php the_field('portfolio_text4'); ?>
+          </div>
           
         </div>
 
         <div class="mix category-2" data-myorder="2">
+        <?php 
+           $image = get_field('portfolio_img6');
+              if( !empty($image) ): ?>
+              <img class="portfolio_img6" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+        <?php endif; ?> 
+         <div class="portfolio_text6">
+             <?php the_field('portfolio_text6'); ?>
+        </div>
           
         </div>
 
