@@ -55,6 +55,22 @@ function hackeryou_scripts() {
   	true //load in footer
   );
 
+   wp_enqueue_script(
+    'stick', //handle
+    get_template_directory_uri() . '/js/stickykit.js', //source
+    array( 'jquery'), //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+   wp_enqueue_script(
+    'mix', //handle
+    get_template_directory_uri() . '/js/jquery.mixitup.js', //source
+    array( 'jquery'), //dependencies
+    null, // version number
+    true //load in footer
+  ); 
+
   wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source

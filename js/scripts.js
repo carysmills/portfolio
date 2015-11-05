@@ -1,5 +1,4 @@
 $(function(){
-
-	console.log("It's working");
-
+	$(".sidebarContainer").stick_in_parent();
+	$('#mixContainer').mixItUp();
 });

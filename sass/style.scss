@@ -36,7 +36,6 @@ body {
 }
 
 .content {
-	float: right;
 	width: 85%;
 }
 
@@ -50,7 +49,6 @@ body {
 
 .backgroundImage {
 	height: 100%;
-	z-index: 1;
 }
 
 .buffer {
@@ -69,26 +67,17 @@ body {
 }
 
 button.what {
-	background: $green;
 	color: white;
 	font-family: 'Open Sans', sans-serif;
-	box-shadow:inset 0px 1px 0px 0px #7a918d;
-	background-color:#7a918d;
-	border-radius:1px;
-	border:1px solid #7a918d;
-	display:inline-block;
-	cursor:pointer;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
-	margin-top: 2%;
-}
-button.what:hover {
-	background-color:#7a918d;
-}
-button.what:active {
-	position:relative;
-	top:1px;
+	background: rgba(255,255,255,0.1);
+	box-shadow: none;
+	border: 2px solid white;
+	padding: 10px 60px;
+	transition: background 0.5s;
+	&:hover {
+		background: rgba(122,145,141,0.8);
+
+	}
 }
 
 .bio {
@@ -109,6 +98,10 @@ img.headshot {
 		background: none;
 		border: 2px solid $purple;
 		padding: 10px;
+		transition: background 0.5s;
+		&:hover {
+		background: rgba(122,145,141,0.8)
+	}
 	}
 }
 
@@ -117,24 +110,23 @@ img.headshot {
 	height: 70%;
 	margin-bottom: 25%;
 	margin-top: 20%;
-	margin-left: 20%;
 }
 
 .sidebarContainer {
 	height: 100%;
 	width: 15%;
-	position: fixed;
+	position: relative;
 	top: 0;
 	left: 0;
-	// background: white;
+	transition: all 5s;
+	z-index: 999999;
+	text-align: center;
 }
+
+//main content section
 
 .getMain {
 	width: 85%;
-}
-
-.menuContainer {
-	margin-left: 27%;
 }
 
 // to get content on the right 
@@ -144,7 +136,7 @@ img.headshot {
 }
 
 .bio.content {
-	margin-bottom: 50px;
+	padding-bottom: 50px;
 }
 
 //portfolio section
@@ -154,13 +146,43 @@ img.headshot {
 	h4 {
 	color: white;
 	&:after {
-		width: 25%;
+		width: 18%;
 	}
 }
 }
 
 .portfolio p {
-	color: white;
+	color: black;
+	margin: 10px;
+}
+
+.mix {
+	background: $grey;
+	// height: 100px;
+	width: 30%;
+	margin: 5px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+// .portfolio_img {
+// 	height: 100%;
+// }
+
+.filter {
+	font-family: 'Open Sans', sans-serif;
+		background: $grey;
+		border: 3px solid black;
+		padding: 10px;
+		margin: 20px;
+		transition: background 0.5s;
+		box-shadow: none;
+		&:hover {
+			background: rgba(122,145,141,0.8);
+		}
+	}	
+
+#mixContainer .mix{
+	display: none;
 }
 
 //expert section
@@ -168,32 +190,101 @@ img.headshot {
 section.expert {
 	text-align: center;
 	background: $grey;
-	padding-top: 50px;
-	padding-left: 50px;
+	padding: 50px;
 	h4 {
 	color: black;
 	margin-top: 0;
 	&:after {
 		margin: 0 auto;
-		width: 30%;
+		width: 25%;
 	}
 }
 }
 
-.expertise {
-	width: 26%;
-	display: flex;
-	strong {
+.expertise strong {
 		font-size: 25px;
 	}
-}
 
 .expertIcon {
-	border: 10px solid $green;
-	border-radius: 50%;
+	border: 5px solid $green;
+	width: 30%;
+	float: left;
+	margin: 10px;
+	transition: background 0.5s;
+	cursor: grab;
+	&:hover {
+		background: rgba(122,145,141,0.2);
+	}
 }
 
-// .expertContained {
-// 	display: flex;
-// 	flex-direction: row;
-// }
+.expertIcon img {
+		max-width: 40%;
+		padding-top: 10px;
+	}
+
+//contact section
+
+.contact {
+	clear: both;
+	padding: 10px 0 50px 50px;
+	h4 {
+		&:after {
+		width: 25%;
+		}
+	}
+	}
+
+.contactwrap {
+	display: flex;
+	justify-content: space-between; 
+	ul {
+		list-style: none;
+		padding: 0;
+	li {
+		font-family: 'Open Sans', sans-serif;
+		position: relative;
+		margin-top: 25px;
+		width: 100%;
+	&:before {
+		content: " ";
+		display: block;
+		background: $green;
+		height: 12px;
+		width: 12px;
+		position: absolute;
+		left: -20px;
+		top: 8px;
+	}	
+	}
+	}
+	}
+
+.form {
+	width: 60%;
+}
+
+.info {
+	width: 30%;
+}
+
+.wpcf7-submit {
+	background: none;
+	border: 2px solid $purple;
+	padding: 10px 60px;
+	transition: background 0.5s;
+	&:hover {
+		background: rgba(122,145,141,0.8);
+	}
+}
+
+.wpcf7-text {
+	border: 2px solid $purple;
+	width: 100%;
+	padding: 10px;	
+}
+
+.wpcf7-textarea {
+	border: 2px solid $purple;	
+	padding: 10px;	
+	width: 100%;
+}	

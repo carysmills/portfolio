@@ -30,7 +30,7 @@
                  '<div class="backgroundImage" style="background:url('.$feat_image_url.');">
                      <div class="buffer">
                         <p class="container">'.$the_content.'</p>
-                        <a href="#"><button class="what">See my work</button></a>
+                        <a href="#portfolio"><button class="what">See my work</button></a>
                       </div>
                   </div>';
                     } endif; ?>
