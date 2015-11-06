@@ -28,7 +28,7 @@
             $the_content = get_the_content();
                  echo 
                  '<div class="backgroundImage" style="background:url('.$feat_image_url.');">
-                     <div class="buffer">
+                     <div class="buffer fade-in">
                         <p class="container">'.$the_content.'</p>
                         <a href="#portfolio"><button class="what">See my work</button></a>
                       </div>

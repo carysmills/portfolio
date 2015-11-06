@@ -191,13 +191,14 @@ img.headshot {
     padding-bottom: 10px;
 }
 
-.portfolio a {
+.portfolio h6 a {
 	background: $green;
 	color: white;
-	padding: 3px 2px;
+	padding: 3px 8px;
 	cursor: pointer;
 	transition: background 0.5s;
-	margin-left: 10px;
+	margin-right: 5px;
+	float: right;
 	&:hover {
 	background: $purple;
 	}
@@ -238,9 +239,11 @@ img.headshot {
 }
 
 .portfolio_text {
-	background: $grey;
+	background: #E0E0E0;
 	padding-top: 20px;
 	margin-top: -10px;
+	box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+
 }
 
 //expert section
@@ -251,7 +254,7 @@ section.expert {
 	text-align: left;
 	color: black;
 	&:after {
-		width: 24%;
+		width: 18%;
 	}
 }
 }
@@ -264,13 +267,35 @@ section.expert {
 	font-size: 25px;
 	}
 
+.expertContainer .bullet {
+	font-family: 'Cutive', serif;
+	color: $purple;
+	position: relative;
+	&:before {
+		content: " ";
+		display: block;
+		background: $purple;
+		height: 12px;
+		width: 12px;
+		position: absolute;
+		left: -20px;
+		top: -2px;
+	}	
+	}
+
+.highlight {
+	background: $green;
+	padding: 2px 2px;
+}	
+
+
+//probably delete a bunch of this:
 .expertIcon {
-	text-align: center;
-	background: lightgrey;
-	padding: 40px 0;
-	width: 30%;
+	background: white;
+	padding: 40px 25px 5px 25px;
+	width: calc(33% - 50px);
 	float: left;
-	margin: 100px 20px 0 0;
+	margin: 50px 15px 0 15px;
 	transition: background 0.5s;
 	position: relative;
 	&:before {
@@ -280,14 +305,15 @@ section.expert {
 		top: -36px;
 		width: 100%;
 		height: 90px;
-		background: lightgrey;
+		background: white;
 		transform: skewY(5deg);
 	}
 }
 
 .expertIcon img {
-		max-width: 30%;
-		padding-top: 10px;
+		max-width: 60%;
+		display: block;
+		margin: 0 auto;
 	}
 
 //contact section
@@ -362,4 +388,29 @@ section.expert {
 	&:active {
 		outline: none;
 	}
-}	
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }	
