@@ -1,6 +1,6 @@
-$purple: #3b323c; //rgba(59, 50, 60, 100)
-$green: #7a918d; //rgba(122, 145, 141, 100)
-$brown: #766b65; //rgba(118, 107, 101, 100)
+// option one 
+$purple: #300f38; 
+$green: #0c8;
 $grey: #F3F2F3;
 
 a {
@@ -32,15 +32,13 @@ h3, h5, h6 {
 
 h4 {
 	font-family: 'Cutive', serif;
-	text-transform: uppercase;
 	font-size: 25px;
 	&:after {
 		content: " ";
 		display: block;
 		background: $green;
 		height: 3px;
-		width: 35%;
-		margin-top: 8px;
+		width: 29%;
 	}
 }
 

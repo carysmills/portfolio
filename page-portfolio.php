@@ -27,8 +27,8 @@
 
       <div class="controls">
         <button class="filter" data-filter="all">All</button>
-        <button class="filter" data-filter=".category-1">Front-end work</button>
-        <button class="filter" data-filter=".category-2">Journalism work</button>
+        <button class="filter" data-filter=".category-1">Web development</button>
+        <button class="filter" data-filter=".category-2">Writing</button>
       </div>
               
       <div id="mixContainer">
@@ -50,7 +50,7 @@
                   if( !empty($image) ): ?>
                   <img class="portfolio_img5" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
             <?php endif; ?> 
-             <div class="portfolio_text5">
+             <div class="portfolio_text">
                  <?php the_field('portfolio_text5'); ?>
             </div>
         </div>
@@ -61,7 +61,7 @@
                   if( !empty($image) ): ?>
                   <img class="portfolio_img_2" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
             <?php endif; ?> 
-             <div class="portfolio_text_2">
+             <div class="portfolio_text">
                  <?php the_field('portfolio_text_2'); ?>
             </div>
         </div>
@@ -72,7 +72,7 @@
                     if( !empty($image) ): ?>
                     <img class="portfolio_img3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
               <?php endif; ?> 
-               <div class="portfolio_text3">
+               <div class="portfolio_text">
                    <?php the_field('portfolio_text3'); ?>
               </div>
           
@@ -84,19 +84,19 @@
                 if( !empty($image) ): ?>
                 <img class="portfolio_img4" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
           <?php endif; ?> 
-           <div class="portfolio_text4">
+           <div class="portfolio_text">
                <?php the_field('portfolio_text4'); ?>
           </div>
           
         </div>
 
-        <div class="mix category-2" data-myorder="2">
+        <div class="mix category-1" data-myorder="2">
         <?php 
            $image = get_field('portfolio_img6');
               if( !empty($image) ): ?>
               <img class="portfolio_img6" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
         <?php endif; ?> 
-         <div class="portfolio_text6">
+         <div class="portfolio_text">
              <?php the_field('portfolio_text6'); ?>
         </div>
           
@@ -107,6 +107,7 @@
   </section>
 
     <section class="expert" id="skills">
+    <div class="skillz">
     <?php the_field('expert_intro')?>
 
         <?php while(has_sub_field('expert')): ?>
@@ -125,6 +126,7 @@
             </div> <!-- end expert icon -->
            <?php endwhile; ?>
       </div> <!-- end expertContainer  -->
+    </div>
   </section>
 
   <section class="contact" id="contact">

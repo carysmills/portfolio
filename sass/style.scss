@@ -19,8 +19,16 @@ Default Styling
 ====================================
 */
 
-a:active, a:hover {
-  outline: 0; }
+a, a:active, a:focus {
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 
 img {
 	max-width: 100%;
@@ -28,6 +36,7 @@ img {
 
 body {
 	color: #333;
+	-webkit-font-smoothing: antialiased;
 }
 
 .container {
@@ -55,28 +64,30 @@ body {
 	text-align: center;
 	padding-top: 30vh;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(48, 15, 56, 0.4);
 	h1 {
 		margin: 0;
 		font-size: 60px;
+		font-weight: normal;
 	}
 }
 
 .buffer h2 {
 	margin: 0;
+	font-weight: 100;
 }
 
 button.what {
 	color: white;
 	font-family: 'Open Sans', sans-serif;
-	background: rgba(255,255,255,0.1);
+	background: $green;
 	box-shadow: none;
-	border: 2px solid white;
+	border: none;
 	padding: 10px 60px;
-	transition: background 0.5s;
+	transition: background 1s;
 	&:hover {
-		background: rgba(122,145,141,0.8);
-
+		color: $green;
+		background: white;
 	}
 }
 
@@ -87,12 +98,12 @@ button.what {
 }
 
 img.headshot {
-	height: 50%;
-	width: 50%;
+	height: 40%;
+	width: 40%;
 }
 
 .biotext {
-	margin: 30px;
+	margin: 50px;
 	button {
 		margin-top: 25px;
 		background: none;
@@ -100,7 +111,7 @@ img.headshot {
 		padding: 10px;
 		transition: background 0.5s;
 		&:hover {
-		background: rgba(122,145,141,0.8)
+		background: $green;
 	}
 	}
 }
@@ -110,6 +121,7 @@ img.headshot {
 	height: 70%;
 	margin-bottom: 25%;
 	margin-top: 20%;
+	text-align: center;
 }
 
 .sidebarContainer {
@@ -118,25 +130,31 @@ img.headshot {
 	position: relative;
 	top: 0;
 	left: 0;
-	transition: all 5s;
 	z-index: 999999;
 	text-align: center;
 }
 
-//main content section
+.sidebarContainer a { 
+	border-bottom: 1px solid white;
+	transition: border 0.5s;
+}	
 
+.sidebarContainer a:hover { 
+	border-bottom: 2px solid $purple;
+}	
+
+.is_stuck {
+	box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+}
+
+//main content section
 .getMain {
 	width: 85%;
 }
 
-// to get content on the right 
 .sidebarWrap {
 	display: flex;
 	justify-content: flex-end; 
-}
-
-.bio.content {
-	padding-bottom: 50px;
 }
 
 //portfolio section
@@ -145,69 +163,125 @@ img.headshot {
 	padding: 30px;
 	h4 {
 	color: white;
+	margin: 50px;
 	&:after {
-		width: 18%;
+		width: 16%;
 	}
 }
 }
 
 .portfolio p {
 	color: black;
-	margin: 10px;
+	// text-align: center;
+	margin: -5px 0px 0px 10px;
+    padding-bottom: 10px;
+	strong {
+	font-family: 'Cutive', serif;
+	font-weight: normal;
+	color: $green;
+	}
+}
+
+.portfolio h6 {
+	font-size: 12px;
+    color: purple;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 0 0 20px 10px;
+    padding-bottom: 10px;
+}
+
+.portfolio a {
+	background: $green;
+	color: white;
+	padding: 3px 2px;
+	cursor: pointer;
+	transition: background 0.5s;
+	margin-left: 10px;
+	&:hover {
+	background: $purple;
+	}
+}
+
+.controls {
+	margin-left: 50px;
 }
 
 .mix {
-	width: 48%;
-	margin: 30px 10px 0 0;
+	width: 30%;
+	margin: 10px 20px 0 0;
 	font-family: 'Open Sans', sans-serif;
 }
 
 .filter {
-	font-family: 'Open Sans', sans-serif;
-		background: $grey;
-		border: 3px solid black;
+		font-family: 'Open Sans', sans-serif;
+		color: white;
+		background: $green;
+		border: none;
 		padding: 10px;
-		margin-bottom: 10px;
-		transition: background 0.5s;
+		margin: 0 15px 15px 0;
+		transition: background 1s;
 		box-shadow: none;
 		&:hover {
-			background: rgba(122,145,141,0.8);
+			background: white;
+			color: $green;
 		}
 	}	
+
+#mixContainer {
+	margin-left: 50px;
+	margin-bottom: 50px;
+}
 
 #mixContainer .mix{
 	display: none;
 }
 
-//expert section
+.portfolio_text {
+	background: $grey;
+	padding-top: 20px;
+	margin-top: -10px;
+}
 
+//expert section
 section.expert {
-	text-align: center;
 	background: $grey;
 	padding: 50px;
 	h4 {
+	text-align: left;
 	color: black;
-	margin-top: 0;
 	&:after {
-		margin: 0 auto;
-		width: 25%;
+		width: 24%;
 	}
 }
+}
+
+.skillz {
+	margin: 50px;
 }
 
 .expertise strong {
-		font-size: 25px;
+	font-size: 25px;
 	}
 
 .expertIcon {
-	border: 3px solid $green;
+	text-align: center;
+	background: lightgrey;
+	padding: 40px 0;
 	width: 30%;
 	float: left;
-	margin: 10px;
+	margin: 100px 20px 0 0;
 	transition: background 0.5s;
-	cursor: grab;
-	&:hover {
-		background: rgba(122,145,141,0.2);
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: -36px;
+		width: 100%;
+		height: 90px;
+		background: lightgrey;
+		transform: skewY(5deg);
 	}
 }
 
@@ -217,18 +291,19 @@ section.expert {
 	}
 
 //contact section
-
 .contact {
 	clear: both;
 	padding: 10px 0 50px 50px;
 	h4 {
+		margin: 50px;
 		&:after {
-		width: 25%;
+		width: 21%;
 		}
 	}
 	}
 
 .contactwrap {
+	margin: 50px;
 	display: flex;
 	justify-content: space-between; 
 	ul {
@@ -263,22 +338,28 @@ section.expert {
 
 .wpcf7-submit {
 	background: none;
-	border: 2px solid $purple;
+	border: 1px solid $purple;
 	padding: 10px 60px;
 	transition: background 0.5s;
+	// border-radius: 5px;
 	&:hover {
-		background: rgba(122,145,141,0.8);
+		background: $green;
 	}
 }
 
 .wpcf7-text {
-	border: 2px solid $purple;
+	border: 1px solid $purple;
 	width: 100%;
 	padding: 10px;	
+	// border-radius: 5px;
 }
 
 .wpcf7-textarea {
-	border: 2px solid $purple;	
+	border: 1px solid $purple;	
 	padding: 10px;	
 	width: 100%;
+	// border-radius: 5px;
+	&:active {
+		outline: none;
+	}
 }	
