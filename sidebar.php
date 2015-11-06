@@ -17,3 +17,15 @@
     
   </div> <!-- /.container -->
 
+<nav class="mobile">
+  <button class="hamburger">
+  	<i class="fa fa-bars"></i>
+  </button>
+  <div>
+  <?php wp_nav_menu( array(
+    'container' => false,
+    'theme_location' => 'primary'
+  )); ?>
+  </div>
+</nav>
+

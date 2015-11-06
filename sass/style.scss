@@ -134,6 +134,12 @@ img.headshot {
 	text-align: center;
 }
 
+@media all and (max-width: 600px) {
+	.sidebarContainer {
+		display: none;
+		}
+	}
+
 .sidebarContainer a { 
 	border-bottom: 1px solid white;
 	transition: border 0.5s;
@@ -151,6 +157,12 @@ img.headshot {
 .getMain {
 	width: 85%;
 }
+
+@media all and (max-width: 600px) {
+	.getMain {
+	width: 100%;
+		}
+	}
 
 .sidebarWrap {
 	display: flex;
@@ -214,6 +226,13 @@ img.headshot {
 	font-family: 'Open Sans', sans-serif;
 }
 
+@media all and (max-width: 1000px) {
+	.mix {
+		width: calc(50% - 10px);
+		margin: 10px 5px 0 0;
+		}
+	}
+
 .filter {
 		font-family: 'Open Sans', sans-serif;
 		color: white;
@@ -260,7 +279,7 @@ section.expert {
 }
 
 .skillz {
-	margin: 50px;
+	margin-lefy: 50px;
 }
 
 .expertise strong {
@@ -271,31 +290,23 @@ section.expert {
 	font-family: 'Cutive', serif;
 	color: $purple;
 	position: relative;
-	&:before {
-		content: " ";
-		display: block;
-		background: $purple;
-		height: 12px;
-		width: 12px;
-		position: absolute;
-		left: -20px;
-		top: -2px;
-	}	
 	}
 
 .highlight {
-	background: $green;
+	background: rgba(0,204,136,0.2);
 	padding: 2px 2px;
+}
+
+.expertIcon a:hover {
+	color: $purple;
 }	
 
-
-//probably delete a bunch of this:
 .expertIcon {
 	background: white;
 	padding: 40px 25px 5px 25px;
-	width: calc(33% - 50px);
+	margin-top: 50px;
+	width: calc(33.3% - 35px);
 	float: left;
-	margin: 50px 15px 0 15px;
 	transition: background 0.5s;
 	position: relative;
 	&:before {
@@ -309,6 +320,21 @@ section.expert {
 		transform: skewY(5deg);
 	}
 }
+
+.expertIcon:first-child {
+	margin-left: 30px;
+}
+
+.expertIcon:last-child {
+	margin-right: 5px;
+}
+
+@media all and (max-width: 900px) {
+	.expertIcon {
+		width: 100%;
+		margin-top: 80px;
+		}
+	}
 
 .expertIcon img {
 		max-width: 60%;
@@ -350,17 +376,37 @@ section.expert {
 		left: -20px;
 		top: 8px;
 	}	
-	}
-	}
-	}
+   }
+  }
+ }
+
+ @media all and (max-width: 600px) {
+ 	.contactwrap {
+ 	flex-direction: column-reverse;
+ 		}
+ 	} 
 
 .form {
 	width: 60%;
 }
 
+@media all and (max-width: 600px) {
+	.form {
+	width: 100%;
+		}
+	} 
+
 .info {
 	width: 30%;
 }
+
+@media all and (max-width: 600px) {
+	.info {
+	width: 100%;
+		}
+	} 
+
+
 
 .wpcf7-submit {
 	background: none;
