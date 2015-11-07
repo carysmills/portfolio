@@ -11,7 +11,7 @@ ul.menu {
 .mobile {
 	position: absolute;
 	top: 15px;
-	left: 15px;
+	left: 1px;
 	display: none;
 	position: fixed;
 	z-index: 999;
@@ -38,8 +38,13 @@ ul.menu {
 	z-index: 9999;
 	i {
 		color: grey;
-		font-size: 50px;	
+		font-size: 28px;
+		transition: color 1s;	
 	}
+}
+
+.hamburger i:hover {
+	color: $green;
 }
 
 .mobile .expanded {
@@ -60,4 +65,8 @@ ul.menu {
 	.mobile {
 		display: block;
 		}
-	}				
+	}	
+
+.none {
+	display: none;
+}

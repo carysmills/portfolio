@@ -21,7 +21,7 @@
   <button class="hamburger">
   	<i class="fa fa-bars"></i>
   </button>
-  <div>
+  <div class="navigation">
   <?php wp_nav_menu( array(
     'container' => false,
     'theme_location' => 'primary'

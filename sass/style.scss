@@ -58,6 +58,16 @@ body {
 
 .backgroundImage {
 	height: 100%;
+	position: relative;
+  	z-index: 800;
+  	.image {
+  		position: absolute;
+	  	top: 0;
+	  	left: 0;
+	  	width: 100%;
+	  	height: 100%;
+	  	opacity: 0.15;
+  	}
 }
 
 .buffer {
@@ -72,6 +82,12 @@ body {
 	}
 }
 
+@media all and (max-width: 600px) {
+	.buffer h1 {
+	font-size: 50px;	
+	}
+	}
+
 .buffer h2 {
 	margin: 0;
 	font-weight: 100;
@@ -84,6 +100,7 @@ button.what {
 	box-shadow: none;
 	border: none;
 	padding: 10px 60px;
+	margin-top: 20px;
 	transition: background 1s;
 	&:hover {
 		color: $green;
@@ -96,6 +113,22 @@ button.what {
 	background: $grey;
 	width: 100%;
 }
+
+
+@media all and (max-width: 800px) {
+	.bio {
+		padding-top: 50px;
+		img {
+		display: none;
+		}
+		}
+	}
+
+@media all and (max-width: 600px) {
+	.bio {
+	   margin: 0;
+		}
+	}	
 
 img.headshot {
 	height: 40%;
@@ -115,6 +148,13 @@ img.headshot {
 	}
 	}
 }
+
+
+@media all and (max-width: 600px) {
+	.biotext {
+	   margin-left: 25px;
+		}
+	}	
 
 .logo {
 	width: 70%;
@@ -182,9 +222,14 @@ img.headshot {
 }
 }
 
+@media all and (max-width: 600px) {
+	.portfolio h4 {
+	margin-left: 0;
+		}
+	}
+
 .portfolio p {
 	color: black;
-	// text-align: center;
 	margin: -5px 0px 0px 10px;
     padding-bottom: 10px;
 	strong {
@@ -206,7 +251,7 @@ img.headshot {
 .portfolio h6 a {
 	background: $green;
 	color: white;
-	padding: 3px 8px;
+	padding: 6px 10px;
 	cursor: pointer;
 	transition: background 0.5s;
 	margin-right: 5px;
@@ -220,11 +265,29 @@ img.headshot {
 	margin-left: 50px;
 }
 
+@media all and (max-width: 600px) {
+	.controls {
+		margin: 0;
+		}
+	}
+
+@media all and (max-width: 435px) {
+	.filter {
+		display: block;
+		}
+	}
+
 .mix {
 	width: 30%;
-	margin: 10px 20px 0 0;
+	margin: 20px 20px 0 0;
 	font-family: 'Open Sans', sans-serif;
 }
+
+@media all and (max-width: 600px) {
+	.contact {
+	   padding: 0;
+		}
+	}	
 
 @media all and (max-width: 1000px) {
 	.mix {
@@ -232,6 +295,13 @@ img.headshot {
 		margin: 10px 5px 0 0;
 		}
 	}
+
+	@media all and (max-width: 600px) {
+		.mix {
+			width: calc(100% - 10px);
+			margin-bottom: 15px;
+			}
+		}	
 
 .filter {
 		font-family: 'Open Sans', sans-serif;
@@ -253,16 +323,22 @@ img.headshot {
 	margin-bottom: 50px;
 }
 
+@media all and (max-width: 600px) {
+	#mixContainer {
+	   margin-left: 0;
+		}
+	}	
+
 #mixContainer .mix{
 	display: none;
 }
 
 .portfolio_text {
 	background: #E0E0E0;
-	padding-top: 20px;
+	padding-top: 25px;
+	padding-bottom: 5px;
 	margin-top: -10px;
 	box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
-
 }
 
 //expert section
@@ -278,9 +354,21 @@ section.expert {
 }
 }
 
+@media all and (max-width: 600px) {
+	section.expert {
+	   padding: 25px;
+		}
+	}
+
 .skillz {
-	margin-lefy: 50px;
+	margin-left: 50px;
 }
+
+@media all and (max-width: 600px) {
+	.skillz {
+	   margin: 0;
+		}
+	}
 
 .expertise strong {
 	font-size: 25px;
@@ -304,8 +392,10 @@ section.expert {
 .expertIcon {
 	background: white;
 	padding: 40px 25px 5px 25px;
+	margin-left: -21px;
+	margin-right: 40px;
 	margin-top: 50px;
-	width: calc(33.3% - 35px);
+	width: calc(33.3% - 19px);
 	float: left;
 	transition: background 0.5s;
 	position: relative;
@@ -321,17 +411,15 @@ section.expert {
 	}
 }
 
-.expertIcon:first-child {
-	margin-left: 30px;
-}
-
-.expertIcon:last-child {
-	margin-right: 5px;
-}
+@media all and (max-width: 600px) {
+	.expertIcon:first-child {
+	   margin-left: 0px;
+		}
+	}
 
 @media all and (max-width: 900px) {
 	.expertIcon {
-		width: 100%;
+		width: 100%;	
 		margin-top: 80px;
 		}
 	}
@@ -341,6 +429,13 @@ section.expert {
 		display: block;
 		margin: 0 auto;
 	}
+
+@media all and (max-width: 900px) {
+	.expertIcon img {
+		max-width: 30%;
+		}
+	}
+
 
 //contact section
 .contact {
@@ -353,6 +448,12 @@ section.expert {
 		}
 	}
 	}
+
+	@media all and (max-width: 600px) {
+		.contact {
+		   padding: 0;
+			}
+		}	
 
 .contactwrap {
 	margin: 50px;
@@ -436,6 +537,8 @@ section.expert {
 	}
 }
 
+//ANIMATION
+
 /* make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn {
   from {
@@ -460,3 +563,75 @@ section.expert {
   animation-fill-mode: forwards;
   -webkit-animation-duration: 1s;
   animation-duration: 1s; }	
+
+  @keyframes move-twink-back {
+      from {background-position:0 0;}
+      to {background-position:-10000px 5000px;}
+  }
+  @-webkit-keyframes move-twink-back {
+      from {background-position:0 0;}
+      to {background-position:-10000px 5000px;}
+  }
+  @-moz-keyframes move-twink-back {
+      from {background-position:0 0;}
+      to {background-position:-10000px 5000px;}
+  }
+  @-ms-keyframes move-twink-back {
+      from {background-position:0 0;}
+      to {background-position:-10000px 5000px;}
+  }
+
+  @keyframes move-clouds-back {
+      from {background-position:0 0;}
+      to {background-position:10000px 0;}
+  }
+  @-webkit-keyframes move-clouds-back {
+      from {background-position:0 0;}
+      to {background-position:10000px 0;}
+  }
+  @-moz-keyframes move-clouds-back {
+      from {background-position:0 0;}
+      to {background-position:10000px 0;}
+  }
+  @-ms-keyframes move-clouds-back {
+      from {background-position: 0;}
+      to {background-position:10000px 0;}
+  }
+
+  .stars, .twinkling, .clouds {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+  }
+	
+  .stars {
+    background: $purple url(images/bgstars.png) repeat top center;
+    z-index:0;
+  }
+
+  .twinkling{
+    background:transparent url(images/twinkling.png) repeat top center;
+    z-index:1;
+
+    -moz-animation:move-twink-back 200s linear infinite;
+    -ms-animation:move-twink-back 200s linear infinite;
+    -o-animation:move-twink-back 200s linear infinite;
+    -webkit-animation:move-twink-back 200s linear infinite;
+    animation:move-twink-back 200s linear infinite;
+  }
+
+  .clouds{
+      background:transparent url(images/clouds.png) repeat top center;
+      z-index:3;
+
+    -moz-animation:move-clouds-back 200s linear infinite;
+    -ms-animation:move-clouds-back 200s linear infinite;
+    -o-animation:move-clouds-back 200s linear infinite;
+    -webkit-animation:move-clouds-back 200s linear infinite;
+    animation:move-clouds-back 200s linear infinite;
+  }
