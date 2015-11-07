@@ -88,10 +88,23 @@ body {
 	}
 	}
 
+@media all and (max-width: 400px) {
+	.buffer h1 {
+	 font-size: 40px;
+	}
+   }
+
+
 .buffer h2 {
 	margin: 0;
 	font-weight: 100;
 }
+
+@media all and (max-width: 400px) {
+	.buffer h2 {
+	font-size: 18px;
+		}
+	}
 
 button.what {
 	color: white;
@@ -99,14 +112,34 @@ button.what {
 	background: $green;
 	box-shadow: none;
 	border: none;
-	padding: 10px 60px;
 	margin-top: 20px;
+	padding: 10px 5px;
+	width: 15%;
 	transition: background 1s;
+	position: absolute;
+	top: 45vh;
+	left: 42%;
+	z-index: 900;
 	&:hover {
 		color: $green;
 		background: white;
 	}
 }
+
+
+@media all and (max-width: 700px) {
+	button.what {
+		left: 35%;
+		width: 30%;
+		}
+	}
+
+@media all and (max-width: 700px) {
+	button.what {
+	left: 30%;
+	width: 40%;
+  }
+}	
 
 .bio {
 	display: flex;
@@ -170,7 +203,7 @@ img.headshot {
 	position: relative;
 	top: 0;
 	left: 0;
-	z-index: 999999;
+	z-index: 500;
 	text-align: center;
 }
 
@@ -618,11 +651,11 @@ section.expert {
     background:transparent url(images/twinkling.png) repeat top center;
     z-index:1;
 
-    -moz-animation:move-twink-back 200s linear infinite;
-    -ms-animation:move-twink-back 200s linear infinite;
-    -o-animation:move-twink-back 200s linear infinite;
-    -webkit-animation:move-twink-back 200s linear infinite;
-    animation:move-twink-back 200s linear infinite;
+    -moz-animation:move-twink-back 150s linear infinite;
+    -ms-animation:move-twink-back 150s linear infinite;
+    -o-animation:move-twink-back 150s linear infinite;
+    -webkit-animation:move-twink-back 150s linear infinite;
+    animation:move-twink-back 150s linear infinite;
   }
 
   .clouds{

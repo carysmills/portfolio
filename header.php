@@ -31,8 +31,7 @@
                  '<div class="backgroundImage">
                      <div class="buffer fade-in">
                         <p class="container">'.$the_content.'</p>
-                        <a href="#portfolio"><button class="what">See my work</button></a>
-                      </div>
+                      </div>      
                       <div class="image" style="background:url('.$feat_image_url.'); background-size: cover;"></div>
                   </div>';
                     } endif; ?>
@@ -43,5 +42,8 @@
        <div class="clouds"></div>
 
         </div>
+
+        <a href="#portfolio"><button class="what">See my work</button></a>
+
 
 </section>
