@@ -1,13 +1,15 @@
   <div class="sidebarContainer">
 
 		<div class="">
-		<div class="logoContainer">
-		       <?php 
-		       $image = get_field('logo');
-		       if( !empty($image) ): ?>
-		        <img class="logo" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-		       <?php endif; ?> 
-		</div>       
+    <a href="#home">
+  		<div class="logoContainer">
+  		       <?php 
+  		       $image = get_field('logo');
+  		       if( !empty($image) ): ?>
+  		        <img class="logo" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+  		       <?php endif; ?> 
+  		</div>  
+    </a>     
 
 	<div class="menuContainer">
 	    <?php wp_nav_menu( array(

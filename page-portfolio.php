@@ -83,7 +83,7 @@
               <?php 
                  $image = get_field('portfolio_img3');
                     if( !empty($image) ): ?>
-                    <a href="http://carysmills.com/potholes" target="_blank"><img class="portfolio_img3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
+                    <a href="http://carysmills.com/ecommerce/" target="_blank"><img class="portfolio_img3" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></a>
               <?php endif; ?> 
                <div class="portfolio_text">
                    <?php the_field('portfolio_text3'); ?>
@@ -135,7 +135,6 @@
              <?php the_field('portfolio_text9'); ?>
         </div>  
         </div>
-
 
       </div>
 

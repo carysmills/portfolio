@@ -39,15 +39,7 @@ h4 {
 		display: block;
 		background: $green;
 		height: 3px;
-		width: 27%;
-	}
-}
-
-@media all and (max-width: 980px) {
-	h4 {
-	&:after {	
-	width: 40%;
-		}
+		width: 150px;
 	}
 }
 

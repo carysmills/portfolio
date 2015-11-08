@@ -18,8 +18,7 @@
 
 
 <body ontouchstart="" <?php body_class(); ?>>
-
-<section id="home">
+<section class="home" id="home">
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -30,7 +29,8 @@
                  echo 
                  '<div class="backgroundImage">
                      <div class="buffer fade-in">
-                        <p class="container">'.$the_content.'</p>
+                        <p class="container fade-in">'.$the_content.'</p>
+                        <a class="animated" href="#about"><i class="fa fa-chevron-down animated fadeInDownBig"></i></a>
                       </div>      
                       <div class="image" style="background:url('.$feat_image_url.'); background-size: cover;"></div>
                   </div>';
@@ -39,11 +39,7 @@
        
        <div class="stars"></div>
        <div class="twinkling"></div>
-       <div class="clouds"></div>
 
         </div>
-
-        <a href="#portfolio"><button class="what">See my work</button></a>
-
 
 </section>

@@ -1,28 +1,117 @@
 // Animation below from http://ianlunn.github.io/Hover/
 
-// @-webkit-keyframes fadeIn {
-//   from {
-//     opacity: 0; }
-//   to {
-//     opacity: 1; } }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
-// @keyframes fadeIn {
-//   from {
-//     opacity: 0; }
-//   to {
-//     opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
-// .fade-in {
-//   opacity: 0;
-//   /* make things invisible upon start */
-//   -webkit-animation: fadeIn ease-in 1;
-//   /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-//   animation: fadeIn ease-in 1;
-//   -webkit-animation-fill-mode: forwards;
-//   /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-//   animation-fill-mode: forwards;
-//   -webkit-animation-duration: 1s;
-//   animation-duration: 1s; }	
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s; }	
+
+ // Animation below from Animate.css https://daneden.github.io/animate.css/ 
+
+.animated {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+ 
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
 
 	// For the styles below animating the header:
   /* ============================================================================================== 
@@ -99,19 +188,4 @@
     -o-animation:move-twink-back 150s linear infinite;
     -webkit-animation:move-twink-back 150s linear infinite;
     animation:move-twink-back 150s linear infinite;
-  }
-
-  .clouds{
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000;
-    transform: translate3d(0, 0, 0);
-      background:transparent url(images/clouds.png) repeat top center;
-      z-index:3;
-
-    -moz-animation:move-clouds-back 200s linear infinite;
-    -ms-animation:move-clouds-back 200s linear infinite;
-    -o-animation:move-clouds-back 200s linear infinite;
-    -webkit-animation:move-clouds-back 200s linear infinite;
-    animation:move-clouds-back 200s linear infinite;
   }
