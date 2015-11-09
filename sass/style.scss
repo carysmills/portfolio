@@ -10,6 +10,7 @@
 @import 'normalize';
 @import 'typography';
 @import 'navigation';
+@import 'animation';
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
@@ -36,7 +37,6 @@ img {
 
 body {
 	color: #333;
-	-webkit-font-smoothing: antialiased;
 }
 
 .container {
@@ -74,7 +74,7 @@ body {
 	text-align: center;
 	padding-top: 30vh;
 	height: 100%;
-	background: rgba(48, 15, 56, 0.4);
+	background: rgba(0,0,0,.2);
 	h1 {
 		margin: 0;
 		font-size: 60px;
@@ -126,7 +126,6 @@ button.what {
 	}
 }
 
-
 @media all and (max-width: 700px) {
 	button.what {
 		left: 35%;
@@ -142,11 +141,12 @@ button.what {
 }	
 
 .bio {
-	display: flex;
 	background: $grey;
 	width: 100%;
+	img {
+	display: block;
+	}
 }
-
 
 @media all and (max-width: 800px) {
 	.bio {
@@ -163,14 +163,17 @@ button.what {
 		}
 	}	
 
-img.headshot {
-	height: 40%;
+.bioHeadshot {
 	width: 40%;
+	float: left;
 }
 
 .biotext {
-	margin: 50px;
+	float: left;
+	width: 50%;
+	margin-left: 40px;
 	button {
+		float: left;
 		margin-top: 25px;
 		background: none;
 		border: 2px solid $purple;
@@ -178,6 +181,7 @@ img.headshot {
 		transition: background 0.5s;
 		&:hover {
 		background: $green;
+		color: black;
 	}
 	}
 }
@@ -185,9 +189,16 @@ img.headshot {
 
 @media all and (max-width: 600px) {
 	.biotext {
-	   margin-left: 25px;
-		}
+	   margin-left: 25px; 
+	}
 	}	
+
+@media all and (max-width: 925px) {
+.biotext button {
+	margin: 20px 0;
+}
+}
+
 
 .logo {
 	width: 70%;
@@ -200,6 +211,9 @@ img.headshot {
 .sidebarContainer {
 	height: 100%;
 	width: 15%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between; 
 	position: relative;
 	top: 0;
 	left: 0;
@@ -211,12 +225,7 @@ img.headshot {
 	.sidebarContainer {
 		display: none;
 		}
-	}
-
-.sidebarContainer a { 
-	border-bottom: 1px solid white;
-	transition: border 0.5s;
-}	
+	}	
 
 .sidebarContainer a:hover { 
 	border-bottom: 2px solid $purple;
@@ -540,14 +549,11 @@ section.expert {
 		}
 	} 
 
-
-
 .wpcf7-submit {
 	background: none;
 	border: 1px solid $purple;
 	padding: 10px 60px;
 	transition: background 0.5s;
-	// border-radius: 5px;
 	&:hover {
 		background: $green;
 	}
@@ -557,114 +563,13 @@ section.expert {
 	border: 1px solid $purple;
 	width: 100%;
 	padding: 10px;	
-	// border-radius: 5px;
 }
 
 .wpcf7-textarea {
 	border: 1px solid $purple;	
 	padding: 10px;	
 	width: 100%;
-	// border-radius: 5px;
 	&:active {
 		outline: none;
 	}
 }
-
-//ANIMATION
-
-/* make keyframes that tell the start state and the end state of our object */
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-.fade-in {
-  opacity: 0;
-  /* make things invisible upon start */
-  -webkit-animation: fadeIn ease-in 1;
-  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-  animation: fadeIn ease-in 1;
-  -webkit-animation-fill-mode: forwards;
-  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-  animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s; }	
-
-  @keyframes move-twink-back {
-      from {background-position:0 0;}
-      to {background-position:-10000px 5000px;}
-  }
-  @-webkit-keyframes move-twink-back {
-      from {background-position:0 0;}
-      to {background-position:-10000px 5000px;}
-  }
-  @-moz-keyframes move-twink-back {
-      from {background-position:0 0;}
-      to {background-position:-10000px 5000px;}
-  }
-  @-ms-keyframes move-twink-back {
-      from {background-position:0 0;}
-      to {background-position:-10000px 5000px;}
-  }
-
-  @keyframes move-clouds-back {
-      from {background-position:0 0;}
-      to {background-position:10000px 0;}
-  }
-  @-webkit-keyframes move-clouds-back {
-      from {background-position:0 0;}
-      to {background-position:10000px 0;}
-  }
-  @-moz-keyframes move-clouds-back {
-      from {background-position:0 0;}
-      to {background-position:10000px 0;}
-  }
-  @-ms-keyframes move-clouds-back {
-      from {background-position: 0;}
-      to {background-position:10000px 0;}
-  }
-
-  .stars, .twinkling, .clouds {
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    width:100%;
-    height:100%;
-    display:block;
-  }
-	
-  .stars {
-    background: $purple url(images/bgstars.png) repeat top center;
-    z-index:0;
-  }
-
-  .twinkling{
-    background:transparent url(images/twinkling.png) repeat top center;
-    z-index:1;
-
-    -moz-animation:move-twink-back 150s linear infinite;
-    -ms-animation:move-twink-back 150s linear infinite;
-    -o-animation:move-twink-back 150s linear infinite;
-    -webkit-animation:move-twink-back 150s linear infinite;
-    animation:move-twink-back 150s linear infinite;
-  }
-
-  .clouds{
-      background:transparent url(images/clouds.png) repeat top center;
-      z-index:3;
-
-    -moz-animation:move-clouds-back 200s linear infinite;
-    -ms-animation:move-clouds-back 200s linear infinite;
-    -o-animation:move-clouds-back 200s linear infinite;
-    -webkit-animation:move-clouds-back 200s linear infinite;
-    animation:move-clouds-back 200s linear infinite;
-  }

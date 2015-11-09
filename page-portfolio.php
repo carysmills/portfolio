@@ -7,13 +7,15 @@
   <div class="getMain">
 
     <section id="about" class="about">
-      <div class="bio content">
+      <div class="bio content clearfix">
       
-      <?php 
-         $image = get_field('headshot');
-            if( !empty($image) ): ?>
-            <img class="headshot" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-      <?php endif; ?> 
+      <div class="bioHeadshot">
+        <?php 
+           $image = get_field('headshot');
+              if( !empty($image) ): ?>
+              <img class="headshot" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+        <?php endif; ?> 
+      </div>
 
       <div class="biotext">
           <?php the_field('bio'); ?>
@@ -169,7 +171,9 @@
         </div>
   </section>
 
+   <?php get_footer(); ?> 
+
   </div> <!-- end getmain -->
+
 </div> <!-- end mainwrapper (sidebarwrap) for flexbox -->
 
-<?php get_footer(); ?> 

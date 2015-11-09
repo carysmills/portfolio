@@ -1,5 +1,6 @@
   <div class="sidebarContainer">
 
+		<div class="">
 		<div class="logoContainer">
 		       <?php 
 		       $image = get_field('logo');
@@ -14,6 +15,15 @@
 	      'theme_location' => 'primary'
 	    )); ?>
     </div>
+    </div>
+
+    <ul class="social clearfix">
+       <?php while(has_sub_field('social')): ?>
+              <li>
+              <a href="<?php the_sub_field('link') ?>"><i class="fa fa-<?php the_sub_field('icon');?>"></i></a>
+               </li>
+             <?php endwhile; ?>
+    </ul>
     
   </div> <!-- /.container -->
 

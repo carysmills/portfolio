@@ -1,9 +1,10 @@
+//stickykit and mix
 $(function(){
-	$(".sidebarContainer").stick_in_parent();
 	$('#mixContainer').mixItUp();
+	$(".sidebarContainer").stick_in_parent({recalc_every: 1});
 });
 
-// Open navigation function
+// Open navigation function for hamburger
 var openNavigation = function () {
 	$('.navigation').slideDown();
 	$('.hamburger').addClass('expanded');
