@@ -33,12 +33,21 @@ h3, h5, h6 {
 h4 {
 	font-family: 'Cutive', serif;
 	font-size: 25px;
+	letter-spacing: 1.5px;
 	&:after {
 		content: " ";
 		display: block;
 		background: $green;
 		height: 3px;
 		width: 27%;
+	}
+}
+
+@media all and (max-width: 980px) {
+	h4 {
+	&:after {	
+	width: 40%;
+		}
 	}
 }
 

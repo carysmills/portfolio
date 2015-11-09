@@ -150,7 +150,7 @@ button.what {
 
 @media all and (max-width: 800px) {
 	.bio {
-		padding-top: 50px;
+		padding: 30px;
 		img {
 		display: none;
 		}
@@ -170,14 +170,15 @@ button.what {
 
 .biotext {
 	float: left;
+	margin-left: 30px;
 	width: 50%;
-	margin-left: 40px;
 	button {
 		float: left;
 		margin-top: 25px;
 		background: none;
 		border: 2px solid $purple;
 		padding: 10px;
+		margin-bottom: 10px;
 		transition: background 0.5s;
 		&:hover {
 		background: $green;
@@ -187,17 +188,19 @@ button.what {
 }
 
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 800px) {
 	.biotext {
-	   margin-left: 25px; 
+	 margin-left: 50px;
+	 width: 85%;
 	}
-	}	
+	}
 
-@media all and (max-width: 925px) {
-.biotext button {
-	margin: 20px 0;
-}
-}
+	@media all and (max-width: 600px) {
+		.biotext {
+		 margin-left: 0;
+		 width: 85%;
+		}
+		}		
 
 
 .logo {
@@ -267,7 +270,10 @@ button.what {
 @media all and (max-width: 600px) {
 	.portfolio h4 {
 	margin-left: 0;
+	&:after {
+	width: 25%;
 		}
+	}
 	}
 
 .portfolio p {
@@ -389,11 +395,26 @@ section.expert {
 	padding: 50px;
 	h4 {
 	text-align: left;
+	margin-left: -20px;
 	color: black;
 	&:after {
-		width: 18%;
+		width: 16%;
 	}
 }
+}
+
+@media all and (max-width: 600px) {
+	section.expert h4{
+	margin-left: 0;
+	}
+	}	
+
+@media all and (max-width: 980px) {
+	section.expert h4 {
+	&:after {	
+	width: 25%;
+		}
+	}
 }
 
 @media all and (max-width: 600px) {
@@ -482,14 +503,20 @@ section.expert {
 //contact section
 .contact {
 	clear: both;
-	padding: 10px 0 50px 50px;
+	padding: 50px 0 50px 50px;
 	h4 {
-		margin: 50px;
+		margin: 30px;
 		&:after {
 		width: 21%;
 		}
 	}
 	}
+
+	@media all and (max-width: 980px) {
+		.contact h4:after {
+		width: 35%;
+			}
+		}
 
 	@media all and (max-width: 600px) {
 		.contact {
@@ -498,7 +525,7 @@ section.expert {
 		}	
 
 .contactwrap {
-	margin: 50px;
+	margin: 30px;
 	display: flex;
 	justify-content: space-between; 
 	ul {

@@ -6,7 +6,7 @@
 
   <div class="getMain">
 
-    <section id="about" class="about">
+    <section id="about" class="about container">
       <div class="bio content clearfix">
       
       <div class="bioHeadshot">
@@ -24,7 +24,7 @@
     </div> 
 </section> 
 
-  <section class="portfolio" id="portfolio">
+  <section class="portfolio container" id="portfolio">
       <?php the_field('top'); ?>
 
       <div class="controls">
@@ -141,7 +141,7 @@
 
   </section>
 
-    <section class="expert" id="skills">
+    <section class="expert container" id="skills">
     <div class="skillz clearfix">
     <?php the_field('expert_intro')?>
         <?php while(has_sub_field('expert')): ?>
@@ -159,7 +159,7 @@
     </div>
   </section>
 
-  <section class="contact" id="contact">
+  <section class="contact container" id="contact">
         <?php the_field('contact_intro') ?>
         <div class="contactwrap clearfix">
           <div class="form">
