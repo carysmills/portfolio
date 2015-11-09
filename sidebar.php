@@ -22,7 +22,7 @@
     <ul class="social clearfix">
        <?php while(has_sub_field('social')): ?>
               <li>
-              <a href="<?php the_sub_field('link') ?>"><i class="fa fa-<?php the_sub_field('icon');?>"></i></a>
+              <a href="<?php the_sub_field('link') ?>" target="_blank"><i class="fa fa-<?php the_sub_field('icon');?>"></i></a>
                </li>
              <?php endwhile; ?>
     </ul>
@@ -38,6 +38,7 @@
     'container' => false,
     'theme_location' => 'primary'
   )); ?>
+    <i class="fa fa-times-circle hamburgertwo"></i>
   </div>
 </nav>
 

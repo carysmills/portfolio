@@ -34,3 +34,7 @@ $('.menu-item a').on('click', function() {
 	closeNavigation();
 });
 
+$('.hamburgertwo').on('click', function() {
+	closeNavigation();
+});
+
