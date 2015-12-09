@@ -15,31 +15,3 @@
 
   <?php wp_head(); ?>
 </head>
-
-
-<body ontouchstart="" <?php body_class(); ?>>
-<section class="home" id="home">
-      <?php // Start the loop ?>
-      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-        <div class="header">
-        <?php if ( has_post_thumbnail() ): {
-            $feat_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
-            $the_content = get_the_content();
-                 echo 
-                 '<div class="backgroundImage">
-                     <div class="buffer fade-in">
-                        <p class="container fade-in">'.$the_content.'</p>
-                        <a class="animated" href="#about"><i class="fa fa-chevron-down animated fadeInDownBig"></i></a>
-                      </div>      
-                      <div class="image" style="background:url('.$feat_image_url.'); background-size: cover;"></div>
-                  </div>';
-                    } endif; ?>
-        <?php endwhile;?>
-       
-       <div class="stars"></div>
-       <div class="twinkling"></div>
-
-        </div>
-
-</section>
